@@ -28,7 +28,7 @@ options.add_argument("--user-data-dir=/home/bhagirath/.config/google-chrome/")
 options.add_argument("--profile-directory=Default")
 capabilities = DesiredCapabilities.CHROME.copy()
 
-service = Service("CHROME DRIVER PATH")
+service = Service("./driver/chromedriver")
 
 browser = webdriver.Chrome(service=service, options=options, desired_capabilities=capabilities)
 
@@ -59,8 +59,8 @@ while True:
                         print(target + ' is offline')
                     time.sleep(1)
                 except:
-                    print('Exception 1')
+                    print('Exception 1 : status is not exist.')
                     time.sleep(10)
             except:
-                print('Exception 2')
+                print('Exception 2 : chat is not exist.')
                 time.sleep(4)
